@@ -1,0 +1,14 @@
+{% layout "example-base" %}
+{% block content %}
+    <div>
+        <h1>Weekly Subscription Report</h1>
+    <div>
+    <table>
+        <thead><tr><th>Subscription</th><th>New Members</th></tr></thead>
+        <tbody>
+            {% for item in report %}
+                <tr><td>{{ item.subscription.name | capitalize }}</td><td>{{ item.count.customer_id }}</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
