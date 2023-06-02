@@ -1,0 +1,8 @@
+{% layout "my-custom-base" %}
+{% block content %}
+    <div>
+        {% for item in items %}
+            <div><a href="{{ item.url }}">{{ item.title }}</a></div>
+        {% endfor %}
+    </div>
+{% endblock %}
